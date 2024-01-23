@@ -26,7 +26,7 @@ print(
 )
 
 
-os.system("color 8B");
+os.system("color 0E");
 
 def menu():
     os.system("cls")
@@ -69,7 +69,7 @@ while True:
         print("\t\t\tCredits")
         print("\t\t\t-------")
         print("\nWe have done a Currency Converter App\nBY\nSahithya.T.S - ECE(2nd Year)\nNiraimathi.V - ECE(2nd Year)\nYuva Rekha @ Yuva Deeksha.G - Civil(3rd Year)")
-        option=menu()
+~        option=menu()
     elif option==5:
         print("Thank you for using this app")
         input()
