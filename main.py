@@ -1,4 +1,9 @@
+from pymongo.mongo_client import MongoClient
 import os
+
+from convert import convert
+from credits import credit
+from add_country import add
 
 os.system("cls")
 print(
@@ -25,8 +30,14 @@ print(
 '''
 )
 
+uri = "mongodb+srv://niraimathi:niraimathi@cluster0.y2ixacg.mongodb.net/?retryWrites=true&w=majority"
+client = MongoClient(uri)
 
-os.system("color 0E");
+db_name = "currency_converter_app"
+database = client[db_name]
+
+
+os.system("color 0E")
 
 def menu():
     os.system("cls")
@@ -49,14 +60,11 @@ while True:
     option = menu()
     if option == 1:
         os.system("cls")
-        print("\t\t\tConvert")
-        print("\t\t\t-------")
-        print("These are the available countries:\n1.France\n2.Cananda\n3.Great Britain\n4.New York\n5.China\n\nFrom Country:\nAmount:")
+        convert(database)
         option = menu()
     elif option == 2:
         os.system("cls")
-        print("\t\t\tAdd country")
-        print("What are the countries you want to add ?\nCountry Name:\nConversion Value:")
+        add(database)
         option=menu()
     elif option ==3:
         os.system("cls")
@@ -66,15 +74,14 @@ while True:
         option=menu()
     elif option==4:
         os.system("cls")
-        print("\t\t\tCredits")
-        print("\t\t\t-------")
-        print("\nWe have done a Currency Converter App\nBY\nSahithya.T.S - ECE(2nd Year)\nNiraimathi.V - ECE(2nd Year)\nYuva Rekha @ Yuva Deeksha.G - Civil(3rd Year)")
-~        option=menu()
+        credit(database)
+
+        option=menu()
     elif option==5:
         print("Thank you for using this app")
         input()
-        break
         os.system("cls")
+        break
     else:
         print("\nPlease enter a valid option from 1 to 5")
         input("\nRedirected to Menu")

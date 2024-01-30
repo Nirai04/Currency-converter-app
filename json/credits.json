@@ -1,0 +1,23 @@
+[
+  {
+    "_id": 1,
+    "name": "nirai",
+    "designation": "ece",
+    "": "",
+    "year": "2nd year"
+  },
+  {
+    "_id": 2,
+    "name": "sahithya",
+    "designation": "ece",
+    "": "",
+    "year": "2nd year"
+  },
+  {
+    "_id": 3,
+    "name": "yuva",
+    "designation": "ce",
+    "": "",
+    "year": "3rd year"
+  }
+]
