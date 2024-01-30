@@ -4,6 +4,7 @@ import os
 from convert import convert
 from credits import credit
 from add_country import add
+from update import update
 
 os.system("cls")
 print(
@@ -68,9 +69,7 @@ while True:
         option=menu()
     elif option ==3:
         os.system("cls")
-        print("\t\t\tUpdate")
-        print("\t\t\t------")
-        print("\nThese are the available countries:\n1.France\n2.Cananda\n3.UK\n4.USA\n5.Europe\n\n\nCountry:\nUpdated value:")
+        update(database)
         option=menu()
     elif option==4:
         os.system("cls")
